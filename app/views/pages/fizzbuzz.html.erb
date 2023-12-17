@@ -1,0 +1,17 @@
+
+<h3>FizzBuzz問題</h3>
+<p>1から100までの数字を順番に表示し、3の倍数のときには「Fizz」、5の倍数のときには「Buzz」、3と5の両方の倍数のときには「FizzBuzz」と表示するものです。</p>
+<hr>
+
+<% numbers = 1..100 %>
+<% numbers.each do |n|%>
+  <% if n % 3 == 0 && n % 5 == 0 %>
+    <p><%= n %>はFizzBuzz</p>
+  <% elsif n % 5 == 0 %>
+    <p><%= n %>はBuzz</p>
+  <% elsif n % 3 == 0 %>
+    <p><%= n %>はFizz</p>
+  <% else %>
+    <p><%= n %></p>
+  <% end %>
+<% end %>
